@@ -14,7 +14,7 @@ for q = thetas
     i = (q*pi)/180;
     S = -(2^(-1/2))*sin(beta)*((cos(alpha)*sin(beta))+ sin(alpha)*cos(beta)*cos(i));
     T = cos(alpha)*cos(beta) - sin(alpha)*sin(beta)*cos(i);
-    dphidtheta = ((J/I)*S)/((T-1)*(1- T +(J/I)*(1+T))*(1+T)^(1/2));
+    dphidtheta = ((J/I)*S)./((T-1)*(1- T +(J/I)*(1+T))*(1+T)^(1/2));
     dphi(q) = dphidtheta;
 end
 plot(thetas, dphi);
